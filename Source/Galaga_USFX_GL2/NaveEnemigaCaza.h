@@ -22,6 +22,8 @@ public:
 
 public:
 	virtual void Mover(float DeltaTime);
+	virtual int32 RecibirDanio(float dano);// Función para recibir daño
+
 
 	
 };

@@ -23,7 +23,9 @@ public:
 	ANaveEnemigaEspia();
 
 public:
-
+	virtual void Mover(float DeltaTime);
+	virtual int32 RecibirDanio(float dano);// Función para recibir daño
+	// Función Tick
 	virtual void Tick(float DeltaTime) override;
-	
+
 };

@@ -1,27 +1,24 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
-#include "NaveEnemiga.h"
+#include "GameFramework/Actor.h"
 #include "NaveEnemigaTransporte.generated.h"
 
-/**
- * 
- */
 UCLASS()
-class GALAGA_USFX_GL2_API ANaveEnemigaTransporte : public ANaveEnemiga
+class GALAGA_USFX_GL2_API ANaveEnemigaTransporte : public AActor
 {
-	GENERATED_BODY()
-public:
-	float dimensionCargaOcupada;
-	float dimensionCargaDisponible;
+    GENERATED_BODY()
 
-protected:
-	virtual void Tick(float DeltaTime) override;
 public:
-	ANaveEnemigaTransporte();
-	virtual void Mover(float DeltaTime);
-	virtual void Cargar(float dimensionCarga, float pesoCarga);
-	
+    // Constructor
+    ANaveEnemigaTransporte();
+
+    // Función Tick
+    virtual void Tick(float DeltaTime) override;
+
+    // Otras funciones y variables, si las hay
+    virtual int32 RecibirDanio(float dano);// Función para recibir daño
+public:
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+    UStaticMeshComponent* mallaNaveEnemigaTransporte;
 };

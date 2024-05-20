@@ -13,7 +13,7 @@ class GALAGA_USFX_GL2_API AFabricaNaves : public AActor
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
+	// Establece valores predeterminados para las propiedades de este actor
 	AFabricaNaves();
 
 
@@ -25,10 +25,10 @@ public:
 
 
 protected:
-	// Called when the game starts or when spawned
+	// Se llama cuando comienza el juego o cuando se genera
 	virtual void BeginPlay() override;
 
 public:
-	// Called every frame
+	// Llama a cada cuadro
 	virtual void Tick(float DeltaTime) override;
 };

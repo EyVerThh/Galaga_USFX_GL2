@@ -17,7 +17,11 @@ public:
 
 	ANaveEnemigaNodriza();
 
+	void Tick(float DeltaTime);
+
 
 public:
-	virtual void Tick(float DeltaTime) override;
+	virtual void Mover(float DeltaTime);
+	virtual int32 RecibirDanio(float dano);// Función para recibir daño
+
 };

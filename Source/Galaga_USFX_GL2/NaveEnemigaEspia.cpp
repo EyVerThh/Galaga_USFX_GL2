@@ -32,5 +32,6 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 
     // Establecer la nueva posición de la nave
     SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, NuevaAltura));
+
 }
 
