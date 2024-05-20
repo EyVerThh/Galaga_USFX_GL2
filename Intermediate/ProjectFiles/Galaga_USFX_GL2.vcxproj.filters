@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_GL2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3904FB93-FCEC-4CE3-AC6B-3A1042F7BCF0}</UniqueIdentifier>
+      <UniqueIdentifier>{A739E425-FF6F-469B-92A6-D5D117776375}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_GL2.Target.cs">
       <Filter>Source</Filter>
@@ -11,10 +11,8 @@
     <None Include="..\..\Source\Galaga_USFX_GL2Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\.gitattributes" />
-    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{3B8AA59C-D407-4C57-B9EB-7D337432C016}</UniqueIdentifier>
+      <UniqueIdentifier>{067221EC-2C4C-465A-B74D-472AB945B7A0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,18 +30,12 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_GL2">
-      <UniqueIdentifier>{4209F78E-98AA-4E2D-BF61-D52912D5107F}</UniqueIdentifier>
+      <UniqueIdentifier>{EB434298-39DE-4990-B19D-4F93594CB367}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX_GL2\FabricaNaves.cpp">
       <Filter>Source\Galaga_USFX_GL2</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_GL2\FabricaNaves.h">
-      <Filter>Source\Galaga_USFX_GL2</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Galaga_USFX_GL2\FacadeColision.cpp">
-      <Filter>Source\Galaga_USFX_GL2</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Galaga_USFX_GL2\FacadeColision.h">
       <Filter>Source\Galaga_USFX_GL2</Filter>
     </ClInclude>
     <None Include="..\..\Source\Galaga_USFX_GL2\Galaga_USFX_GL2.Build.cs">
@@ -103,6 +95,5 @@
     <ClInclude Include="..\..\Source\Galaga_USFX_GL2\NaveEnemigaTransporte.h">
       <Filter>Source\Galaga_USFX_GL2</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
