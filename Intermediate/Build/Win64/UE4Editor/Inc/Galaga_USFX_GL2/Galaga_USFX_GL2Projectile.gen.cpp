@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_GL2Projectile() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
+	GALAGA_USFX_GL2_API UClass* Z_Construct_UClass_AFacadeNaves_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AGalaga_USFX_GL2Projectile::execOnHit)
 	{
@@ -137,6 +138,10 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_GL2Projectile() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FacadeNaves_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FacadeNaves;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -176,9 +181,17 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_GL2Projectile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_GL2Projectile, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_ProjectileMovement_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_FacadeNaves_MetaData[] = {
+		{ "Category", "FacadeNaves" },
+		{ "ModuleRelativePath", "Galaga_USFX_GL2Projectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_FacadeNaves = { "FacadeNaves", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_GL2Projectile, FacadeNaves), Z_Construct_UClass_AFacadeNaves_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_FacadeNaves_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_FacadeNaves_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_ProjectileMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_ProjectileMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::NewProp_FacadeNaves,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGalaga_USFX_GL2Projectile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGalaga_USFX_GL2Projectile>::IsAbstract,
@@ -207,7 +220,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_GL2Projectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFX_GL2Projectile, 3200779627);
+	IMPLEMENT_CLASS(AGalaga_USFX_GL2Projectile, 1845680955);
 	template<> GALAGA_USFX_GL2_API UClass* StaticClass<AGalaga_USFX_GL2Projectile>()
 	{
 		return AGalaga_USFX_GL2Projectile::StaticClass();

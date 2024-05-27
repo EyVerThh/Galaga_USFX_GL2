@@ -12,7 +12,9 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
-
+#include "FabricaNaves.h"
+		
+			
 const FName AGalaga_USFX_GL2Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_GL2Pawn::MoveRightBinding("MoveRight");
 const FName AGalaga_USFX_GL2Pawn::FireForwardBinding("FireForward");
@@ -20,7 +22,7 @@ const FName AGalaga_USFX_GL2Pawn::FireRightBinding("FireRight");
 
 AGalaga_USFX_GL2Pawn::AGalaga_USFX_GL2Pawn()
 {	
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("/Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/NaveEspia.NaveEspia'"));
 	// Create the mesh component
 	ShipMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	RootComponent = ShipMeshComponent;

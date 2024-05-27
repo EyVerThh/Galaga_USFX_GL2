@@ -7,12 +7,15 @@ void ANaveEnemigaTransporte::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Mover(DeltaTime);
+    
 }
 
 ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Plane.Shape_Plane'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/NaveEnemigaTransporte.NaveEnemigaTransporte'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
+
+    VelocidadYTransporte = 100.0f;
 
 	dimensionCargaOcupada = 300.0f;
 	dimensionCargaDisponible = 700.0f;
@@ -20,19 +23,24 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 
 void ANaveEnemigaTransporte::Mover(float DeltaTime)
 {
-	// Obtiene la posición actual del actor
-	FVector PosicionActual = GetActorLocation();
+    //Obtenemos la posición actual del actor
+    FVector PosicionActual = GetActorLocation();
 
-	// Genera nuevas coordenadas X e Y aleatorias
-	float NuevaX = FMath::RandRange(-1000.0f, 1000.0f) * (DeltaTime / 1000.0f);
-	float NuevaY = FMath::RandRange(-1000.0f, 1000.0f) * (DeltaTime / 1000.0f);
-	float NuevaZ = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
+    // Generamos nuevas coordenadas X e Y aleatorias
+    float NuevaX = 0.0f; // No se mueve en el eje X
 
-	// Crea un nuevo vector de posición con las coordenadas aleatorias y la misma Z que la posición actual
-	FVector NuevaPosicion = FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z + NuevaZ);
+    // Calculamos la nueva posición en el eje Y
+    float NuevaPosicionY = PosicionActual.Y + (VelocidadYTransporte * DeltaTime);
 
-	// Establece la nueva posición del actor
-	SetActorLocation(NuevaPosicion);
+    // Verificamos si la nave ha alcanzado el límite superior o inferior
+    if (NuevaPosicionY <= -1000.0f || NuevaPosicionY >= 1000.0f)
+    {
+        // Cambiamos la dirección multiplicando por -1
+        VelocidadYTransporte *= -1.0f;
+    }
+    // Establecemos la nueva posición del actor
+    SetActorLocation(FVector(PosicionActual.X + NuevaX, NuevaPosicionY, PosicionActual.Z));
+
 }
 
 void ANaveEnemigaTransporte::Cargar(float dimensionCarga, float pesoCarga)

@@ -12,8 +12,10 @@ void ANaveEnemigaCaza::BeginPlay()
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_QuadPyramid.Shape_QuadPyramid'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/NaveCaza.NaveCaza'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
+
+	VelocidadYCaza = 100.0f;
 
 }
 
@@ -26,16 +28,22 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
 {
-	// Obtiene la posición actual del actor
-	FVector PosicionActual = GetActorLocation();
+    //Obtenemos la posición actual del actor
+     FVector PosicionActual = GetActorLocation();
 
-	// Genera nuevas coordenadas X e Y aleatorias
-	float NuevaX = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-	float NuevaY = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
+     // Generamos nuevas coordenadas X e Y aleatorias
+     float NuevaX = 0.0f; // No se mueve en el eje X
 
-	// Crea un nuevo vector de posición con las coordenadas aleatorias y la misma Z que la posición actual
-	FVector NuevaPosicion = FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z);
+     // Calculamos la nueva posición en el eje Y
+     float NuevaPosicionY = PosicionActual.Y + (VelocidadYCaza * DeltaTime);
 
-	// Establece la nueva posición del actor
-	SetActorLocation(NuevaPosicion);
+     // Verificamos si la nave ha alcanzado el límite superior o inferior
+     if (NuevaPosicionY <= -1000.0f || NuevaPosicionY >= 1000.0f)
+     {
+        // Cambiamos la dirección multiplicando por -1
+        VelocidadYCaza *= -1.0f;
+     }
+        // Establecemos la nueva posición del actor
+        SetActorLocation(FVector(PosicionActual.X + NuevaX, NuevaPosicionY, PosicionActual.Z));
+    
 }

@@ -18,7 +18,7 @@
 /ignore:4099
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"D:\Program Files\Visual Studio\VC\Tools\MSVC\14.39.33519\lib\x64"
+/LIBPATH:"D:\Program Files\Visual Studio\VC\Tools\MSVC\14.40.33807\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
@@ -34,7 +34,8 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\Galaga_USFX_GL2Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\FabricaNave.cpp.obj"
+"D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\FabricaNaves.cpp.obj"
+"D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\FacadeColision.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2GameMode.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2Pawn.cpp.obj"
@@ -44,7 +45,7 @@
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\NaveEnemigaEspia.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\NaveEnemigaNodriza.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\NaveEnemigaTransporte.cpp.obj"
-"D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\FabricaNave.gen.cpp.obj"
+"D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\FabricaNaves.gen.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2.init.gen.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2GameMode.gen.cpp.obj"
 "D:\Unreal Engine Documentos\Galaga_USFX_GL2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_GL2\Galaga_USFX_GL2Pawn.gen.cpp.obj"

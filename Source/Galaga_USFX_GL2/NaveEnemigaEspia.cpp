@@ -5,7 +5,7 @@
 
 ANaveEnemigaEspia::ANaveEnemigaEspia()
 {
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_Espia.TwinStickUFO_Espia'"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/NaveEnemigaEspia.NaveEnemigaEspia'"));
     mallaNaveEnemiga->SetStaticMesh(malla.Object);
     VelocidadVertical = 1.0f;
 }

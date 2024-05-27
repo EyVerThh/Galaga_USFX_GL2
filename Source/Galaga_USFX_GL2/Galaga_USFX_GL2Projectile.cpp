@@ -6,6 +6,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/StaticMesh.h"
+#include "NaveEnemiga.h"
+#include "FacadeNaves.h"
 
 AGalaga_USFX_GL2Projectile::AGalaga_USFX_GL2Projectile() 
 {
@@ -40,6 +42,7 @@ void AGalaga_USFX_GL2Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* Oth
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
-
 	Destroy();
+	FacadeNaves->DestruirNavesEnemigas(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);
+
 }

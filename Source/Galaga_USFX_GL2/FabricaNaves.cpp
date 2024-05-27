@@ -16,26 +16,24 @@ AFabricaNaves::AFabricaNaves()
 
 ANaveEnemiga* AFabricaNaves::FabricarNaves(FString TipoNave, UWorld* World, FVector SpawnLocation, FRotator SpawnRotation) //Funcion para fabricar naves
 {
-
-	FVector SpawnLocationAdjusted = SpawnLocation;//Se ajusta la posicion de la nave
 	if (TipoNave == "NaveEnemigaCaza")//Si el tipo de nave es NaveCaza
 	{
-		ANaveEnemigaCaza* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaCaza>(SpawnLocationAdjusted, SpawnRotation);	//Se crea una nave Caza	
+		ANaveEnemigaCaza* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpawnRotation);	//Se crea una nave Caza	
 		return NuevaNaveEnemiga;//Se retorna la nave creada
 	}
-	else if (TipoNave == "NaveEnemigaEspia")//Si el tipo de nave es NaveCaza
+	if (TipoNave == "NaveEnemigaEspia")//Si el tipo de nave es NaveCaza
 	{
-		ANaveEnemigaEspia* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaEspia>(SpawnLocationAdjusted, SpawnRotation);//Se crea una nave Espia
+		ANaveEnemigaEspia* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaEspia>(SpawnLocation, SpawnRotation);//Se crea una nave Espia
 		return NuevaNaveEnemiga;//Se retorna la nave creada
 	}
-	else if (TipoNave == "NaveEnemigaNodriza")//Si el tipo de nave es NaveNozdriza
+	if (TipoNave == "NaveEnemigaNodriza")//Si el tipo de nave es NaveNozdriza
 	{
-		ANaveEnemigaNodriza* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaNodriza>(SpawnLocationAdjusted, SpawnRotation);//Se crea una nave Nodriza
+		ANaveEnemigaNodriza* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaNodriza>(SpawnLocation, SpawnRotation);//Se crea una nave Nodriza
 		return NuevaNaveEnemiga;//Se retorna la nave creada
 	}
-	else if (TipoNave == "NaveEnemigaTransporte")//Si el tipo de nave es NaveTransporte
+	if (TipoNave == "NaveEnemigaTransporte")//Si el tipo de nave es NaveTransporte
 	{
-		ANaveEnemigaTransporte* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaTransporte>(SpawnLocationAdjusted, SpawnRotation);//Se crea una nave Transporte
+		ANaveEnemigaTransporte* NuevaNaveEnemiga = World->SpawnActor<ANaveEnemigaTransporte>(SpawnLocation, SpawnRotation);//Se crea una nave Transporte
 		return NuevaNaveEnemiga;//Se retorna la nave creada
 	}
 	

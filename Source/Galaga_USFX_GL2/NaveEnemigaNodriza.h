@@ -20,4 +20,7 @@ public:
 
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void Mover(float DeltaTime);
+
+	float VelocidadYCaza;
 };

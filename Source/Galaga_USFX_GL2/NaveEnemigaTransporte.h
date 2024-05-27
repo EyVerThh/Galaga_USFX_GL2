@@ -7,7 +7,7 @@
 #include "NaveEnemigaTransporte.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class GALAGA_USFX_GL2_API ANaveEnemigaTransporte : public ANaveEnemiga
@@ -23,5 +23,6 @@ public:
 	ANaveEnemigaTransporte();
 	virtual void Mover(float DeltaTime);
 	virtual void Cargar(float dimensionCarga, float pesoCarga);
-	
+	float VelocidadYTransporte;
+
 };

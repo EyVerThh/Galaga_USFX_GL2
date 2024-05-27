@@ -68,5 +68,6 @@ public:
 protected:
 	void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover, );
 
+
 };
 

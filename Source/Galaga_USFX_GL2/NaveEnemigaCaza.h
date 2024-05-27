@@ -23,5 +23,5 @@ public:
 public:
 	virtual void Mover(float DeltaTime);
 
-	
+	float VelocidadYCaza;
 };

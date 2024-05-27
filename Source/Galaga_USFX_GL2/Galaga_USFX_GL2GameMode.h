@@ -1,5 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -14,8 +16,15 @@ class AGalaga_USFX_GL2GameMode : public AGameModeBase
 
 public:
 	AGalaga_USFX_GL2GameMode();
+
+protected:
+	virtual void BeginPlay() override;
+
 public:
-	TArray<ANaveEnemiga*> NaveEnemiga;
+
+	UPROPERTY(VisibleAnywhere, Category = "FacadeNaves")
+	class AFacadeNaves* FacadeNaves;
+
 };
 
 
