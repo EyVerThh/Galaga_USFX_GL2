@@ -15,7 +15,7 @@ class AGalaga_USFX_GL2GameMode : public AGameModeBase
 public:
 	AGalaga_USFX_GL2GameMode();
 public:
-	TArray<ANaveEnemiga*> NavesEnemigas;
+	TArray<ANaveEnemiga*> NaveEnemiga;
 };
 
 
